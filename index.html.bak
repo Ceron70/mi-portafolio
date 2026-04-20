@@ -211,7 +211,7 @@
                 titulo: "Notas Escolares",
                 descripcion: "Sistema de gestión de notas para instituciones educativas. Permite registrar, modificar y consultar calificaciones.",
                 imagen: "imagenes/Notas escolares.png",
-                tecnologias: ["JavaScript", "HTML", "CSS", "LocalStorage"],
+                tecnologias: ["JavaScript", "HTML", "CSS", "Node.js", "Express.js", "PostgreSQL", "Render", "GitHub"],
                 demo: "https://notas-escolares.onrender.com/",
                 codigo: "#"
             },
@@ -219,7 +219,9 @@
                 titulo: "App de Clima y Noticias",
                 descripcion: "Consulta el clima y las noticias actuales de cualquier ciudad del mundo en tiempo real.",
                 imagen: "imagenes/clima_noticias.jpg",
-                tecnologias: ["React", "API", "CSS Modules"],
+                tecnologias": ["JavaScript", "HTML", "CSS", "Node.js", "Express.js", "PostgreSQL", "Supabase", "WeatherAPI", "NewsData.io", "Render", "Netlify", "Git", "GitHub"]
+},
+
                 demo: "https://clima-noticias.netlify.app/",
 				
                 codigo: "#"
