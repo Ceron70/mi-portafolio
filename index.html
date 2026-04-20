@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Carlos Chávez F. - Programador de Aplicaciones">
+    <title>Carlos Chávez F. | Portafolio de Aplicaciones</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f8fafc;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .autor {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .autor h2 {
+            font-size: 1.8rem;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+        }
+
+        .autor .rol {
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .autor .contacto {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        .subtitulo {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 400px));
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            background: #e2e8f0;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        .card p {
+            color: #475569;
+            line-height: 1.5;
+            margin-bottom: 1.2rem;
+            font-size: 0.9rem;
+        }
+
+        .tecnologias {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .tech-badge {
+            background: #eef2ff;
+            color: #2563eb;
+            font-size: 0.7rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        .links {
+            display: flex;
+            gap: 1.2rem;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1rem;
+        }
+
+        .links a {
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .links a:first-child {
+            color: #2563eb;
+        }
+
+        .links a:first-child:hover {
+            color: #1d4ed8;
+        }
+
+        .links a:last-child {
+            color: #475569;
+        }
+
+        .links a:last-child:hover {
+            color: #0f172a;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .autor h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="autor">
+            <h2>Carlos Chávez F.</h2>
+            <div class="rol">📱 Programador de Aplicaciones</div>
+            <div class="contacto">📞 988160607</div>
+        </div>
+
+        <h1>📱 Mis Aplicaciones</h1>
+        <div class="subtitulo">Proyectos desarrollados por Carlos Chávez F.</div>
+
+        <div class="grid" id="proyectos-grid"></div>
+
+        <footer>
+            <p>📧 cerobitdata@gmail.com | 📞 988160607 | <a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+            <p style="margin-top: 0.5rem; font-size: 0.75rem;">© 2026 Carlos Chávez F. - Programador de Aplicaciones</p>
+        </footer>
+    </div>
+
+    <script>
+        const proyectos = [
+            {
+                titulo: "Notas Escolares",
+                descripcion: "Sistema de gestión de notas para instituciones educativas. Permite registrar, modificar y consultar calificaciones.",
+                imagen: "imagenes/Notas escolares.png",
+                tecnologias: ["JavaScript", "HTML", "CSS", "LocalStorage"],
+                demo: "https://notas-escolares.onrender.com/",
+                codigo: "#"
+            },
+            {
+                titulo: "App de Clima y Noticias",
+                descripcion: "Consulta el clima y las noticias actuales de cualquier ciudad del mundo en tiempo real.",
+                imagen: "imagenes/clima_noticias.jpg",
+                tecnologias: ["React", "API", "CSS Modules"],
+                demo: "https://delicate-halva-d2a4c8.netlify.app/",
+				
+                codigo: "#"
+            }
+        ];
+
+        const grid = document.getElementById("proyectos-grid");
+        
+        proyectos.forEach(proy => {
+            const card = document.createElement("div");
+            card.className = "card";
+            
+            let techHTML = "";
+            proy.tecnologias.forEach(tech => {
+                techHTML += `<span class="tech-badge">${tech}</span>`;
+            });
+            
+            card.innerHTML = `
+                <img src="${proy.imagen}" alt="${proy.titulo}">
+                <div class="card-content">
+                    <h3>${proy.titulo}</h3>
+                    <p>${proy.descripcion}</p>
+                    <div class="tecnologias">${techHTML}</div>
+                    <div class="links">
+                        <a href="${proy.demo}" target="_blank">🔗 Ver demo</a>
+                        <a href="${proy.codigo}" target="_blank">📁 Código</a>
+                    </div>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+    </script>
+</body>
+</html>
